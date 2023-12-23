@@ -11,10 +11,8 @@ using namespace std;
 void mostrarResultado(int** m1, int** m2, int** m3, int f, int c){
 	cout << "La suma de las matrices es:" << endl;
 	for (int i = 0; i < f; i++) {
-		for (int j = 0; j < c; j++)
-		{
-			cout << m1[i][j] << " + " << m2[i][j] << " = " << m3[i][j] << endl;
-		}
+		for (int j = 0; j < c; j++) cout << m1[i][j] << " + " << m2[i][j] << " = " << m3[i][j] << endl;
+		
 	}
 }
 
@@ -23,10 +21,8 @@ int** sumaMatrices(int** m1, int** m2,int f,int c) {
 	for (int i = 0; i < f; i++) m3[i] = new int[c];
 
 	for (int i = 0; i < f; i++) {
-		for (int j = 0; j < c; j++)
-		{
-			m3[i][j] = (m1[i][j]+m2[i][j]);
-		}
+		for (int j = 0; j < c; j++) m3[i][j] = (m1[i][j]+m2[i][j]);
+		
 	}
 	return m3;
 }
@@ -47,9 +43,8 @@ int pedirColumnas() {
 
 int** devolverMatriz(int filas, int columnas) {
 	int** matriz = new int* [filas];
-	for (int i = 0; i < filas; i++) {
-		matriz[i] = new int[columnas];
-	}
+	for (int i = 0; i < filas; i++) matriz[i] = new int[columnas];
+	
 
 	for (int i = 0; i < filas; i++) {
 		for (int j = 0; j < columnas; j++)
